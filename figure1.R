@@ -26,8 +26,8 @@ unlink(temp)
 
 figure1 %>%
   ggplot + geom_line(aes(x = date, y = value, color = variable)) +
-  theme_minimal() + xlab("") + ylab("100 = 2021Q4") +
-  zoo::scale_x_yearqtr(labels = scales::date_format("%YT%q"), n = 24) +
+  theme_minimal() + xlab("") + ylab("100 = 2021-Q4") +
+  zoo::scale_x_yearqtr(labels = scales::date_format("%Y-Q%q"), n = 24) +
   scale_y_log10(breaks = seq(0, 1500, 5)) +
   theme(legend.position = c(0.3, 0.8),
         legend.title = element_blank(),
